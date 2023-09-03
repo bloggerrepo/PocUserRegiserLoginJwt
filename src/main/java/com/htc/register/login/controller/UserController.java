@@ -18,21 +18,11 @@ public class UserController {
 
 	@Autowired
 	private UsersService usersService;
-//
-//	@PostMapping(path = "/register/", consumes = "application/json")
-//	public String addUser(@RequestBody Users users) {
-//		
-//		try {
-//		usersService.addUser(users);
-//		return "User save ";
-//		}
-//		catch(Exception e) {
-//			return "user already exsist";
-//		}
-//	}
+
 	
 	@GetMapping("/login")
 	public Users getUserDetails(@RequestParam String email) {
+		System.out.println("user details...");
 		return usersService.getUserByEmail(email);
 	}
 
