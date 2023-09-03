@@ -8,4 +8,6 @@ import com.htc.register.login.entity.Users;
 public interface UsersService {
 
 	public String addUser(Users users) ;
+	
+	public Users getUserByEmail(String email);
 }

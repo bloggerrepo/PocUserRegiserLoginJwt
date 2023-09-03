@@ -30,4 +30,12 @@ public class UsersServiceImpl implements UsersService {
 		}
 
 	}
+
+	@Override
+	public Users getUserByEmail(String email) {
+		// TODO Auto-generated method stub
+		
+		Users u =usersRepo.findByUsersEmail(email);
+		return u;
+	}
 }
